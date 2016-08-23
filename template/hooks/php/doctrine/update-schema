@@ -28,12 +28,6 @@ updateSchema()
 			else
 				echo "Looks like you're not using migrations! the following queries will be run:"
 				$console doctrine:schema:update --dump-sql --complete
-				read -p "Do you wish to update the schema (y/n) ? " -n 1
-				if [[ ! $REPLY =~ ^[Yy]$ ]]
-				then
-					echo "not updating"
-					exit 1
-				fi
 				$console doctrine:schema:update --force --complete
 			fi
 			;;
