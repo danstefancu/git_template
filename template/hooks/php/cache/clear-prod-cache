@@ -1,0 +1,10 @@
+#!/bin/bash -u
+. "$GIT_DIR/hooks/git_config_wrapper.sh"
+
+clearCache()
+{
+	local console
+	get_hook_config cache sf-executable console optional app/console
+
+	$console cache:clear --prod
+}
