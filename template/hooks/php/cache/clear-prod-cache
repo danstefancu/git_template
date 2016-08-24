@@ -6,5 +6,5 @@ clearCache()
 	local console
 	get_hook_config cache sf-executable console optional app/console
 
-	$console cache:clear --prod
+	$console cache:clear --env=prod
 }
