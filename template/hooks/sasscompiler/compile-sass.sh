@@ -2,11 +2,11 @@
 
 compileSass()
 {
-    if ! [ -x "$(command -v sass)" ];
+    if ! [ -x "$(command -v gulp)" ];
     then
       echo 'sass is not installed. Not compiling css.'
       exit 1
     else
-        sass web/assets/scss/main.scss:web/assets/css/main.css
+        gulp sass:themes
     fi
 }
